@@ -3,3 +3,4 @@ main.o
 moc_mainwindow.o
 moc_mainwindow.cpp
 ui_mainwindow.h
+mainwindow.h.autosave
