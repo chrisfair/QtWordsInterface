@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -11,4 +12,18 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+//!
+//! Initialization
+void MainWindow::Initialize()
+{
+
+
+
+}
+
+QString MainWindow::ExecuteWords(QString * initialWords)
+{
+
 }
