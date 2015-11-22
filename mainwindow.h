@@ -19,7 +19,15 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QProcess * m_whitakersWords;
+    QString TranslateToEnglish(QString initialWords);
+    void SetUpConnections();
+    void SendListOfWordsToBeTranslatedIntoEnglish();
+
+private slots:
+
+    void Translate_click();
+
+
 };
 
 #endif // MAINWINDOW_H
