@@ -77,12 +77,13 @@ void MainWindow::SendListOfWordsToBeTranslatedIntoEnglish()
     originalText.remove('.');
     originalText.remove(',');
     originalText.remove(';');
+    originalText.remove("/n/n~~~");
     QStringList noSpaces = originalText.split(' ');
     foreach(QString string, noSpaces)
     {
 
         finalTranslation.append(TranslateToEnglish(string));
-        finalTranslation.append("/n/n~~~");
+        finalTranslation.append("\n\n");
 
     }
 
