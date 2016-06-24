@@ -92,7 +92,7 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="latinToEnglish">
           <property name="text">
            <string>From Latin to English</string>
           </property>
@@ -105,7 +105,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="englishToLatin">
           <property name="text">
            <string>From English to Latin</string>
           </property>
@@ -119,7 +119,7 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QRadioButton" name="radioButton_4">
+         <widget class="QRadioButton" name="meaningsAndGrammar">
           <property name="text">
            <string>Meanings and Morphology</string>
           </property>
@@ -132,7 +132,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_3">
+         <widget class="QRadioButton" name="meaningsOnly">
           <property name="text">
            <string>Meanings Only</string>
           </property>
@@ -152,7 +152,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="translationButtons"/>
   <buttongroup name="optionsButton"/>
+  <buttongroup name="translationButtons"/>
  </buttongroups>
 </ui>

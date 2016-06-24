@@ -25,6 +25,7 @@ private:
 
 private slots:
 
+    void ClearText_click();
     void Translate_click();
 
 

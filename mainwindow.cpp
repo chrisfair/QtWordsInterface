@@ -30,7 +30,21 @@ void MainWindow::Initialize()
 void MainWindow::SetUpConnections()
 {
     connect(ui->Translate,SIGNAL(clicked()),this, SLOT(Translate_click()));
+    connect(ui->ClearText,SIGNAL(clicked()),this,SLOT(ClearText_click()));
 
+}
+
+void MainWindow::ClearText_click()
+{
+    if (ui->englishToLatin->isChecked())
+    {
+        qDebug()<<"You want to delete the latin window";
+    }
+
+    else if (ui->latinToEnglish->isChecked())
+    {
+        qDebug()<<"You want to delete the English window";
+    }
 }
 
 QString MainWindow::TranslateToEnglish(QString LatinWordToTranslate)
@@ -49,7 +63,6 @@ QString MainWindow::TranslateToEnglish(QString LatinWordToTranslate)
         while (whitakersWords.waitForFinished()) {};
         QByteArray resultFromWhitakersWords;
         resultFromWhitakersWords.append(whitakersWords.readAll());
-
         stringResultFromWhitakersWords = resultFromWhitakersWords.data();
 
         QStringList noLines = stringResultFromWhitakersWords.split('\n');
@@ -57,10 +70,8 @@ QString MainWindow::TranslateToEnglish(QString LatinWordToTranslate)
         noLines.removeLast();
         noLines.removeLast();
 
-
         stringResultFromWhitakersWords.clear();
         stringResultFromWhitakersWords = noLines.join('\n');
-
 
 
     }
@@ -98,7 +109,16 @@ void MainWindow::Translate_click()
 {
 
 
-    SendListOfWordsToBeTranslatedIntoEnglish();
+    if( ui->englishToLatin->isChecked())
+    {
+        qDebug()<<"I cannot translate English into Latin yet";
+
+
+    }
+    else if (ui->latinToEnglish)
+    {
+        SendListOfWordsToBeTranslatedIntoEnglish();
+    }
 
 }
 
